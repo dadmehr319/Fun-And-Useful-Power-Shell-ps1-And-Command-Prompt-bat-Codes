@@ -17,7 +17,7 @@
 
 .NOTES
     Author:   Your Name
-    Version:  1.0
+    Version:  1.3 (With Read-Host pause)
     Script:   Get-SystemInfo (Basic System Checker)
 #>
 # =================================================================================================
@@ -30,6 +30,7 @@ function Write-SectionHeader {
     Write-Host ("     {0}" -f $Title) -ForegroundColor Green
     Write-Host "================================================================================" -ForegroundColor DarkGreen
 }
+
 
 # --------------------------- Script Start ---------------------------
 Write-Host "`n[Start] Running Basic System Information..." -ForegroundColor Yellow
@@ -96,6 +97,6 @@ Get-CimInstance Win32_DiskDrive |
 Write-Host "`n[Done] Basic System Information Complete!" -ForegroundColor Yellow
 Write-Host "================================================================================" -ForegroundColor DarkGreen
 
-# === Keep window open until manually closed ===
-Write-Host "`nPress Enter to close this window, or just click the X (top right)." -ForegroundColor Yellow
+# --------------------------- Keep Window Open ---------------------------
+Write-Host "`nPress Enter to close this window..." -ForegroundColor Yellow
 Read-Host
